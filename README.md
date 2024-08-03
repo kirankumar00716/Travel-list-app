@@ -1,6 +1,6 @@
 # Travel List
 
-Welcome to the Travel List project! This application is built using React.js and demonstrates core fundamental concepts such as state management, controlled elements, state uplifting, derived state, and parent-child relationships. The project provides a simple and intuitive interface for managing a travel packing list, with features that enhance usability and user experience.
+Travel List is a simple and efficient tool for organizing your packing items. It allows you to add, delete, and mark items as packed, sort by various criteria, and view packing statistics. Designed for convenience, this responsive application ensures you stay organized on any device.
 
 ## Features
 
