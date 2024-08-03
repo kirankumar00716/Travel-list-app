@@ -1,10 +1,4 @@
-/* 
-const initialItems = [
-  { id: 1, description: "Passports", quantity: 2, packed: false },
-  { id: 2, description: "Socks", quantity: 12, packed: false },
-];
-*/
-
+/* Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Monoton&family=Quicksand:wght@500;700&display=swap");
 
 * {
@@ -14,20 +8,19 @@ const initialItems = [
 }
 
 html {
-  font-size: 62.5%;
+  font-size: 62.5%; /* 1rem = 10px */
 }
 
 body {
-  font-size: 2.4rem;
-  font-family: sans-serif;
+  font-size: 1.6rem; /* Default font size */
+  font-family: "Quicksand", sans-serif;
   color: #5a3e2b;
-  font-family: "Quicksand";
   font-weight: 500;
 }
 
 .app {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   display: grid;
   grid-template-rows: auto auto 1fr auto;
 }
@@ -35,27 +28,28 @@ body {
 h1 {
   text-align: center;
   background-color: #f4a226;
-  font-family: "Monoton";
-  font-size: 8rem;
+  font-family: "Monoton", cursive;
+  font-size: 4rem;
   text-transform: uppercase;
   font-weight: 400;
-  word-spacing: 30px;
-  letter-spacing: -5px;
-  padding: 2.4rem 0;
+  word-spacing: 1rem;
+  letter-spacing: -0.5rem;
+  padding: 2rem 0;
 }
 
 .add-form {
   background-color: #e5771f;
-  padding: 2.8rem 0;
+  padding: 2.4rem 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.8rem;
+  gap: 1rem;
+  flex-wrap: wrap;
 }
 
 h3 {
   margin-right: 1.6rem;
-  font-size: 2.4rem;
+  font-size: 2rem;
 }
 
 button,
@@ -65,10 +59,10 @@ input {
   color: #5a3e2b;
   font-family: inherit;
   border: none;
-  border-radius: 10rem;
-  padding: 1.2rem 3.2rem;
+  border-radius: 5rem;
+  padding: 1rem 2rem;
   font-weight: 700;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   cursor: pointer;
 }
 
@@ -80,12 +74,11 @@ input {
 .list {
   background-color: #5a3e2b;
   color: #ffebb3;
-  padding: 4rem 0;
-
+  padding: 2rem 0;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-  gap: 3.2rem;
+  gap: 2rem;
   align-items: center;
 }
 
@@ -100,10 +93,10 @@ input {
 
 .list ul {
   list-style: none;
-  width: 80%;
-
+  width: 100%;
+  max-width: 1200px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 1.2rem;
   justify-content: center;
   align-content: start;
@@ -134,5 +127,58 @@ input[type="checkbox"] {
   background-color: #76c7ad;
   text-align: center;
   font-weight: 700;
-  padding: 3.2rem 0;
+  padding: 2.4rem 0;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  html {
+    font-size: 50%;
+  }
+
+  h1 {
+    font-size: 5rem;
+    word-spacing: 0.5rem;
+    letter-spacing: -0.2rem;
+  }
+
+  .add-form {
+    padding: 1.6rem 0;
+  }
+
+  button,
+  select,
+  input {
+    padding: 1rem 1.5rem;
+    font-size: 1.4rem;
+  }
+
+  .list ul {
+    width: 90%;
+  }
+
+  .stats {
+    padding: 2rem 0;
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 45%;
+  }
+
+  h1 {
+    font-size: 4rem;
+  }
+
+  button,
+  select,
+  input {
+    padding: 0.8rem 1rem;
+    font-size: 1.2rem;
+  }
+
+  .list ul {
+    grid-template-columns: 1fr;
+  }
 }
